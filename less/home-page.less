@@ -5,8 +5,9 @@
     border-bottom: 2px dashed @navigation-border;
 
     img {
-      max-width: 100%;
+      max-width: inherit !important;
       height: auto;
+      transition: all 1.5s,
     }
 
     h2 {
@@ -20,8 +21,8 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
-    
+
+
     .text-content {
       width: 48%;
       padding-right: 1%;
@@ -84,6 +85,7 @@
 
     img {
       border-radius: 10px;
+      transition: all 1.5s,
     }
   }
 
@@ -105,10 +107,26 @@
         width: 80%;
         margin: 0 auto 30px;
       }
-      
+
       .btn {
-        .button-creator(200px, 45px, @button-bg, @white, 1.8rem);     
+        .button-creator(200px, 45px, @button-bg, @white, 1.8rem);
       }
     }
   }
-}// home
+
+  .form-section {
+    form {
+      .flex(@direction: column, @mainAxis: space-evenly);
+
+      h3 {
+        font-size: 3.5rem;
+      }
+
+      * {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}
+
+// home

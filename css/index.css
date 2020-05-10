@@ -180,6 +180,7 @@ img {
   background: #FFFFFF;
   border-bottom: 2px dashed #C0C0C0;
   position: fixed;
+  z-index: 1;
 }
 .main-navigation .nav-container {
   height: 100%;
@@ -231,8 +232,9 @@ img {
   border-bottom: 2px dashed #C0C0C0;
 }
 .home .intro img {
-  max-width: 100%;
+  max-width: inherit !important;
   height: auto;
+  transition: all 1.5s;
 }
 .home .intro h2 {
   margin-top: 20px;
@@ -304,6 +306,7 @@ img {
 }
 .home .content-destination img {
   border-radius: 10px;
+  transition: all 1.5s;
 }
 .home .content-pick {
   padding-top: 30px;
@@ -349,4 +352,16 @@ img {
 .home .content-pick .destination .btn:hover {
   background: #FFFFFF;
   color: #17A2B8;
+}
+.home .form-section form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.home .form-section form h3 {
+  font-size: 3.5rem;
+}
+.home .form-section form * {
+  margin-bottom: 1.5rem;
 }
