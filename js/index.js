@@ -79,5 +79,12 @@ const links = document.querySelectorAll("a");
 links.forEach((link) => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
+    e.stopPropagation();
+    // This stops the Nav clicked appearing on the console.
   });
+});
+
+const nav = document.querySelector(".nav");
+nav.addEventListener("click", (e) => {
+  console.log("Nav clicked");
 });
